@@ -1,26 +1,31 @@
 import 'package:flutter/cupertino.dart';
 
-void main(){
-  const Text("Login");   // UI fixed bcz const
-
-  final userName = "Ali";   // from user final
-
-  var count = 0;    // changes var
-
-  dynamic apiData;   // from server dynamic
-
-  // var use
-  var age=25;
+void main() {
+  // ----------------------------
+  // VAR variables
+  // ----------------------------
+  var age = 25;              // type inferred, fixed after first assignment
+  var city = "Lahore";       // inferred as String
   print(age);
-  var city="lahore";
   print(city);
-  dynamic v=34;
-  v="anwar";
+
+  // ----------------------------
+  // DYNAMIC variable
+  // ----------------------------
+  dynamic v = 34;
+  v = "Anwar";               // type can change at runtime
   print(v);
-  final a=45.6;
-  print(a);
-  const pi='welcome';
-  print(pi);
+  print(v.runtimeType);      // prints current type
 
+  // ----------------------------
+  // FINAL variable
+  // ----------------------------
+  final a = 45.6;
+  print(a);                  // assigned once, memory allocated at runtime
 
+  // ----------------------------
+  // CONST variable
+  // ----------------------------
+  const pi = 'welcome';
+  print(pi);                 // assigned at compile-time, cannot change
 }
